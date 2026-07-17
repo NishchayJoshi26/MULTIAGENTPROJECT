@@ -46,3 +46,36 @@ npm run dev
 ## Environment Variables
 
 Copy .env.example to .env and update the values before running the services.
+
+## Phase 6A - Multi-Agent AI Foundation
+
+```mermaid
+flowchart TD
+    A[Frontend] --> B[FastAPI]
+    B --> C[Intent Detection]
+    C --> D[Agent Router]
+    D --> E[Billing]
+    D --> F[Technical]
+    D --> G[Product]
+    D --> H[Complaint]
+    D --> I[FAQ]
+    E --> J[Response Aggregator]
+    F --> J
+    G --> J
+    H --> J
+    I --> J
+```
+
+### Current scope
+- LangGraph-based orchestration scaffold
+- Intent Detection Agent
+- Specialized agents for billing, technical, product, complaint, and FAQ domains
+- Agent Router with mock workflow selection
+- Prompt templates for each agent
+- Unit tests for agent routing and workflow response
+
+### Not implemented yet
+- Gemini integration
+- RAG pipeline
+- Business logic execution
+- Real downstream tool calls

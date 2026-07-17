@@ -15,6 +15,9 @@ class Settings(BaseSettings):
     allowed_origins: List[str] = ["http://localhost:3000"]
     log_level: str = "INFO"
     rate_limit_per_minute: int = 60
+    api_version: str = "v1"
+    server_host: str = "0.0.0.0"
+    server_port: int = 8000
 
     class Config:
         env_file = ".env"
