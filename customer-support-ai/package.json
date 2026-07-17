@@ -1,0 +1,16 @@
+{
+  "name": "customer-support-ai",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": ["frontend"],
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace frontend\" \"uvicorn backend.main:app --reload --host 0.0.0.0 --port 8000\"",
+    "dev:frontend": "npm run dev --workspace frontend",
+    "dev:backend": "uvicorn backend.main:app --reload --host 0.0.0.0 --port 8000",
+    "install:frontend": "npm install --workspace frontend",
+    "install:backend": "pip install -r requirements.txt"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.0"
+  }
+}
